@@ -1050,7 +1050,7 @@ local function main()
 			end
 		end})
 
-		context:Register("SELECT_CHILDREN",{Name = "Select Children", IconMap = Explorer.MiscIcons, Icon = "SelectChildren", DisabledIcon = "SelectChildren_Disabled", OnClick = function()
+		context:Register("SELECT_CHILDREN",{Name = "اخفاء الكائنات المحذوفه", IconMap = Explorer.MiscIcons, Icon = "SelectChildren", DisabledIcon = "SelectChildren_Disabled", OnClick = function()
 			local newSelection = {}
 			local count = 1
 			local sList = selection.List
@@ -1160,7 +1160,7 @@ local function main()
 			Explorer.ForceUpdate()
 		end})
 
-		context:Register("CLEAR_SEARCH_AND_JUMP_TO",{Name = "Clear Search and Jump to", OnClick = function()
+		context:Register("CLEAR_SEARCH_AND_JUMP_TO",{Name = "مسح البحث وا انتقال اليه", OnClick = function()
 			local newSelection = {}
 			local count = 1
 			local sList = selection.List
@@ -1293,11 +1293,11 @@ local function main()
 			pcall(function() if nodes[plr] then selection:Set(nodes[plr]) Explorer.ViewNode(nodes[plr]) end end)
 		end})
 
-		context:Register("REFRESH_NIL",{Name = "Refresh Nil Instances", OnClick = function()
+		context:Register("REFRESH_NIL",{Name = "تحديث العناصر المنقطعة", OnClick = function()
 			Explorer.RefreshNilInstances()
 		end})
 		
-		context:Register("HIDE_NIL",{Name = "Hide Nil Instances", OnClick = function()
+		context:Register("HIDE_NIL",{Name = "اخفاء العناصر المنقطعة", OnClick = function()
 			Explorer.HideNilInstances()
 		end})
 
